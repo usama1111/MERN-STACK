@@ -35,7 +35,7 @@ function Navbar() {
           <div>
       </div>
       </div>
-
+s
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>

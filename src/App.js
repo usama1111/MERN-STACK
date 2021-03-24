@@ -1,28 +1,36 @@
-import React from "react";
-import mainLogo from'./Components/Logo2.png';
+ import { useEffect, useState } from 'react';
 import './App.css';
-import Navbar from './Components/NavBar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Pages/Home';
-import SignUp from './Pages/SignUp';
-function App(){
+import Signin from './Pages/Signin';
+import { auth } from './firebase';
 
-return(
-
-<div>
- <Router>
-        <Navbar />
-        <Switch>
-         {/*  <Route path='/' exact component={SignUp} />
-          */}   <Route path='/home'  component={Home} />
-     {/*        <Route path='/products' component={Products} /> 
-      */}    </Switch>
-      </Router>
+function App() {
+   const [user, setUser] = useState(null)
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(userAuth => {
+      const user = {
+        uid: userAuth?.uid,
+        email: userAuth?.email
+      }
+      if (userAuth) {
+        console.log(userAuth)
+        setUser(user)
+      } else {
+        setUser(null)
+      }
+    })
+    return unsubscribe
+  }, [])
+  return (
+    <div className="App">
+      {user ? <Home /> : <Signin />}
  
-<img src= {mainLogo} alr = {"logo"}/>
 
-</div>
+    </div>
+
 );
 }
 
-export default App;
+export default App; 
+
+
