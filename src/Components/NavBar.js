@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import mainLogo from'./Logo2.png';
+import {Button} from '@material-ui/core';
+
+import {auth} from '../firebase';
 
 import { IconContext } from 'react-icons';
 import { Typography } from '@material-ui/core';
@@ -27,15 +30,16 @@ function Navbar() {
           </Link>
           <div ref={ref} onPlayCapture={()=> getAnimation().play()} >
           <h1 className ="name">Pikowawi</h1>
-
-
-          </div>
+    </div>
           <img src= {mainLogo} alt={"logo"} className="logo" />
-
+          
+          <Button variant="contained" color="primary" href="#contained-buttons" onClick={() => auth.signOut()}>
+  SignOut
+</Button>
           <div>
       </div>
       </div>
-s
+
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>

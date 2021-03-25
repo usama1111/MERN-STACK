@@ -1,8 +1,11 @@
- import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Home from './Pages/Home';
 import Signin from './Pages/Signin';
 import { auth } from './firebase';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './Components/NavBar';
+import About from './Pages/About';
 
 function App() {
    const [user, setUser] = useState(null)
@@ -23,14 +26,12 @@ function App() {
   }, [])
   return (
     <div className="App">
-      {user ? <Home /> : <Signin />}
- 
-
+      {/*  {user ?  <Signin/> : <Home/>}
+       */}
+       <Home/>
     </div>
 
 );
 }
 
 export default App; 
-
-

@@ -1,6 +1,6 @@
 .navbar {
     /*background-color: #060b26; */
-background-color: orange;
+background-color: #65A6C1;
 
     height: 80px;
     display: flex;
@@ -18,8 +18,10 @@ background-color: orange;
   }
   
   .nav-menu {
-    background-color: #060b26;
-    width: 250px;
+  /*   background-color: #060b26;
+   */ 
+   background-color: #65A6C1;
+   width: 250px;
     height: 100vh;
     display: flex;
     justify-content: center;
