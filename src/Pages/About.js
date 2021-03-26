@@ -1,11 +1,28 @@
 import React from 'react';
 
+//importing typewriter-effect
+import Typewriter from "typewriter-effect";
+import './About.css';
 
-export default function About(){
+function About() {
+return (
+	<div className="Type">
+	<Typewriter
 
-return(
+	onInit={(typewriter)=> {
 
-<h1> Hey from about </h1>
-
+	typewriter
+		
+	.typeString("Pikowawi is an online inventory Management Tool")
+		
+	.pauseFor(1000)
+	.deleteAll()
+	.typeString("Have A Good day")
+	.start();
+	}}
+	/>
+	</div>
 );
 }
+
+export default About;

@@ -16,30 +16,30 @@ export const SidebarData = [
     path: '/about',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
-  } /* ,
+  } ,
   {
-    title: 'Signout',
-    path: '/signout',
+    title: 'Add An inventory',
+    path: '/inventory',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
-  } */
-  /*
+  } 
+  
   ,
   {
-    title: 'Products',
-    path: '/products',
+    title: 'Show All Inventory',
+    path: '/allinventory',
     icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },
   {
-    title: 'Team',
-    path: '/team',
+    title: 'Update Inventory',
+    path: '/updateinventory',
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },
   {
-    title: 'Messages',
-    path: '/messages',
+    title: 'Contact PIKOWAWI',
+    path: '/contactUs',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
@@ -48,5 +48,5 @@ export const SidebarData = [
     path: '/support',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
-  } */
+  } 
 ];

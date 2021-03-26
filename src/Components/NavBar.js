@@ -43,6 +43,7 @@ function Navbar() {
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
+              <img src={mainLogo} alt={"logo"} className="logo"/>
               <Link to='#' className='menu-bars'>
                 <AiIcons.AiOutlineClose />
               </Link>
