@@ -26,9 +26,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      {/*  {user ?  <Signin/> : <Home/>}
-       */}
-       <Home/>
+        {user ?  <Home/> : <Signin/>}
+       
     </div>
 
 );

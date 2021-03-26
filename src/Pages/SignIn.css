@@ -1,7 +1,10 @@
+
 .signin{
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 .signin>form{
@@ -16,3 +19,5 @@
 .signin__link:hover{
     text-decoration: underline;
 }
+
+

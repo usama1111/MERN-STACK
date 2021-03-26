@@ -37,6 +37,7 @@ return(
 <div>
     <br/>
     </div>
+    <br/>
     <img src={image} alt={"img"} className='Grapgh_img' />
 <FooterPage/>
 </div>

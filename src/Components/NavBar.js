@@ -29,7 +29,7 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
           <div ref={ref} onPlayCapture={()=> getAnimation().play()} >
-          <h1 className ="name">Pikowawi</h1>
+          <h4 className ="name">Pikowawi</h4>
     </div>
           <img src= {mainLogo} alt={"logo"} className="logo" />
           

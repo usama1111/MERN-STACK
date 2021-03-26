@@ -1,8 +1,8 @@
-.navbar {
+.navbar2 {
     /*background-color: #060b26; */
 background-color: #65A6C1;
 
-    height: 80px;
+    height: 180px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -87,10 +87,10 @@ text-indent: 0in;
 justify-content: space-between;
 }
 
-.logo {
+.logo1 {
   height: auto;
   width: auto;
-  max-height: 72px;
+  max-height: 150px;
   max-width: 250px;
   flex-wrap: wrap;
 
@@ -98,11 +98,5 @@ justify-content: space-between;
 
 
 
-.footer{
-
-background-color: #65A6C1;
-width: 100vh;
-height: 100px;
-}
 
 

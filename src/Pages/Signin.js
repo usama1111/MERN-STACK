@@ -22,19 +22,25 @@ const Signin = () => {
             passwordRef.current.value
         ).then(user => {
             console.log(user)
-        }).catch(err => {
+     
+
+            }).catch(err => {
             console.log(err)
+            prompt("Try Again");
+            
         })
     }
     return (
+        <div className="body">
         <div className="signin">
-            <form action="">
+             <form action="">
                 <h1>Sign in</h1>
                 <input ref={emailRef} type="email" />
                 <input ref={passwordRef} type="password" />
                 <button onClick={signIn}>Sign in </button>
                 <h6>Not yet register? <span onClick={signUp} className="signin__link">Sign up</span></h6>
-            </form>
+            </form> 
+            </div>
         </div>
     )
 }
