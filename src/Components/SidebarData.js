@@ -22,16 +22,14 @@ export const SidebarData = [
     path: '/inventory',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
-  } 
-  
-  ,
+  },
   {
     title: 'Show All Inventory',
     path: '/allinventory',
     icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },
-  
+   
   
   {
     title: 'Support',
