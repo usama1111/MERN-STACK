@@ -37,7 +37,7 @@ const Signin = () => {
         <div className="body">
         <div className="signin">
              <form action="">
-                <h1>Sign in</h1>
+                <h1 className="head">Sign in to Suaypay </h1>
                 <input ref={emailRef} type="email" placeholder="email" />
                 <input ref={passwordRef} type="password" placeholder= "password" />
                 <button onClick={signIn}>Sign in </button>

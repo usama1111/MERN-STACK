@@ -17,12 +17,12 @@ return(
     <div >
         <div className='box'>
     <Box clone>
-        <h1> Last Month sales: $12000</h1>
+        <h1> You have to pay: $1200</h1>
         </Box>
     </div>
         <div className='box'>
     <Box clone>
-        <h1> Today's inventory count: 4000</h1>
+        <h1> Due Date: 12-3-2022 </h1>
 </Box>
 </div>
 <div className='box'>

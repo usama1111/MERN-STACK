@@ -4,7 +4,6 @@ import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
-import mainLogo from'./Logo2.png';
 import {Button} from '@material-ui/core';
 
 import {auth} from '../firebase';
@@ -29,9 +28,8 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
           <div ref={ref} onPlayCapture={()=> getAnimation().play()} >
-          <h4 className ="name">Pikowawi</h4>
+          <h4 className ="name">Suaypay</h4>
     </div>
-          <img src= {mainLogo} alt={"logo"} className="logo" />
           
           <Button variant="contained" color="primary" href="#contained-buttons" onClick={() => auth.signOut()}>
   SignOut
@@ -43,7 +41,6 @@ function Navbar() {
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
-              <img src={mainLogo} alt={"logo"} className="logo"/>
               <Link to='#' className='menu-bars'>
                 <AiIcons.AiOutlineClose />
               </Link>
