@@ -1,37 +1,24 @@
-  
-import { useEffect, useState } from 'react';
-import './App.css';
-import Home from './Pages/Home';
-import Signin from './Pages/Signin';
-import { auth } from './firebase';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './Components/NavBar';
-import About from './Pages/About';
+import react from 'react';
+import AllUsers from './Component/AllUsers';
+import AddUser from './Component/AddUser';
+import EditUser from './Component/EditUser';
+import NavBar from './Component/NavBar';
+import CodeForInterview from './Component/CodeForInterview';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
-   const [user, setUser] = useState(null)
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(userAuth => {
-      const user = {
-        uid: userAuth?.uid,
-        email: userAuth?.email
-      }
-      if (userAuth) {
-        console.log(userAuth)
-        setUser(user)
-      } else {
-        setUser(null)
-      }
-    })
-    return unsubscribe
-  }, [])
   return (
-    <div className="App">
-        {user ?  <Home/> : <Signin/>}
-       
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={CodeForInterview} />
+        <Route exact path="/all" component={AllUsers} />
+        <Route exact path="/add" component={AddUser} />
+        <Route exact path="/edit/:id" component={EditUser} />
 
-);
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
-export default App; 
+export default App;
